@@ -1,18 +1,18 @@
-import {BrowserRouter as Router } from "react-router-dom"
-// import Login from "./components/Login/Login";
-// g
-import SelfServices from "./components/Pages/SelfServicesPages/SelfServices";
-// import './App.css';
-
+import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import StylishSidebar from './components/Login/Login';
+import ResponsiveDrawer from './components/DashBoard/Dashboard';
 function App() {
   return (
-    <div className="App">
-      <Router>
-      {/* <Login /> */}
-        {/* <MiniDrawer/> */}
-        < SelfServices />
-
-      </Router>
+    <div>
+      <BrowserRouter>
+        <Route exact path="/">
+          <StylishSidebar />
+        </Route>
+        <Route exact path="/Dashbord">
+          <ResponsiveDrawer />
+        </Route>
+      </BrowserRouter>
     </div>
   );
 }
