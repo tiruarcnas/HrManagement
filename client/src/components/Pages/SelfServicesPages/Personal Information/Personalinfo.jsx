@@ -1,43 +1,70 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import React from 'react'
+import { Card,Form,Row,Col } from 'react-bootstrap';
+import { FormControl,InputLabel,Input,FormHelperText } from '@mui/material';
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
-
-export default function WorkInformation() {
+function PersonalInformation() {
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-         Personal Information
-        </Typography>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-        labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-        Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-        Convallis convallis tellus id interdum velit laoreet id donec ultrices. Odio morbi quis commodo odio
-        aenean sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus 
-        euismod quis viverra nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. 
-        Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. 
-        At augue eget arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt.
-        Lorem donec massa sapien faucibus et molestie ac.Consequat mauris nunc congue nisi vitae suscipit.
-        Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer 
-        enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit 
-        amet volutpat consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus
-        sed vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. 
-        In hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et tortor.
-        Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin nibh sit. Ornare
-        aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. 
-        Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-      </CardContent>
-    </Card>
-  );
+    <div>
+      <Card className="bsccard" style={{ width: '65%' }}>
+                <Card.Header><b>Personal Information</b></Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                    <Form>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="4">
+                        Date of Birth
+                        </Form.Label>
+                        <Col sm="8">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="4">
+                        Age
+                        </Form.Label>
+                        <Col sm="8">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="4">
+                        Gender
+                        </Form.Label>
+                        <Col sm="8">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="4">
+                        Phone Number
+                        </Form.Label>
+                        <Col sm="8">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="4">
+                        Employment Status
+                        </Form.Label>
+                        <Col sm="8">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="4">
+                        Experience
+                        </Form.Label>
+                        <Col sm="8">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                    </Form>
+                    </Card.Text>
+                </Card.Body>
+            </Card> 
+      
+    </div>
+  )
 }
+
+export default PersonalInformation

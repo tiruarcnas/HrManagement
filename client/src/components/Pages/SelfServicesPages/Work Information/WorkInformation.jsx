@@ -1,53 +1,45 @@
 import React from 'react'
-import {Card, Table, Form} from 'react-bootstrap'
+import { Card,Form,Row,Col } from 'react-bootstrap';
+import { FormControl,InputLabel,Input,FormHelperText } from '@mui/material';
 
 function WorkInformation() {
   return (
-      <div className="workinfo">
-             <Card className="work" style={{ width: '100%' }}>
+    <div>
+      <Card className="bsccard" style={{ width: '65%' }}>
                 <Card.Header><b>Work Information</b></Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <div className="table">
-                            <Table responsive="sm">
-                                <thead>
-                                    <tr>
-                                        <th>Department</th>
-                                        <th>Location</th>
-                                        <th>Designation</th>          
-                                    </tr>
-                                </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>IT</td>
-                                        <td>Vizag</td>
-                                        <td>junior software</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Networking</td>
-                                        <td>Vizag</td>
-                                        <td>Senior</td>    
-                                    </tr>
-                                    <tr>
-                                        <td>IT</td>
-                                        <td>Hyderbad</td>
-                                        <td>developer</td>  
-                                    </tr>
-                                    <tr>
-                                        <td>Electrical</td>
-                                        <td>Vizag</td>
-                                        <td>maintance Engineering</td>
-                                    </tr>
-    
-     
-    </tbody>
-  </Table>
-  </div>
-                     
+                    <Form>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="2">
+                        Department
+                        </Form.Label>
+                        <Col sm="10">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="2">
+                        Location
+                        </Form.Label>
+                        <Col sm="10">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label column sm="2">
+                        Designation
+                        </Form.Label>
+                        <Col sm="10">
+                          <Form.Control type="mail" placholder="firstname"/>
+                        </Col>
+                      </Form.Group>
+                    </Form>
                     </Card.Text>
                 </Card.Body>
-            </Card>            
-        </div>
+            </Card> 
+      
+    </div>
   )
 }
 

@@ -1,9 +1,13 @@
 import React from 'react';
 import './AdminDashBoard.css'
-import Announcement from './Announcements/Announcement'
+import Announcement from './mainCard1/Announcement'
 import { Card } from 'react-bootstrap';
 import LeaveRequests from './LeaveRequests/LeaveRequests';
 import Birthday from './Birthday/Birthday';
+import NewHiresUpdate from './NewHiresUpdate/NewHiresUpdate';
+import Ament from './Announcement/Ament';
+import UpcomingHolidays from './UpcomingHolidays/UpcomingHolidays'
+
 
 
 function AdminDashBoard() {
@@ -17,7 +21,12 @@ function AdminDashBoard() {
                     <LeaveRequests /> 
                 </Card.Body>
                 <Card.Body className="maincard3"> 
-                    <Birthday className="birthday"/>   
+                    <NewHiresUpdate/>
+                    <div>
+                    <Birthday/> 
+                    <Ament />
+                    </div>
+                    <UpcomingHolidays />
                 </Card.Body>
                 
                 

@@ -3,6 +3,7 @@ import {Card} from 'react-bootstrap'
 import BasicInformation from './BasicInfromation/BasicInformation'
 import WorkInformation from './Work Information/WorkInformation'
 import PersonalInfo from './Personal Information/Personalinfo'
+import HierarchyInformation from './Hierarchy Information/HierarchyInformation'
 import './SelfServices.css'
 
 function ServicesDashBoard() {
@@ -14,7 +15,10 @@ function ServicesDashBoard() {
                 <Card.Body className="ssmaincard2">
                     <WorkInformation />
                 </Card.Body>
-                <Card.Body className="ssmaincard3"> 
+                <Card.Body className="ssmaincard3">
+                    <HierarchyInformation />
+                </Card.Body>
+                <Card.Body className="ssmaincard4"> 
                     <PersonalInfo />  
                 </Card.Body>
         </Card>

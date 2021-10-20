@@ -1,14 +1,19 @@
 import React from 'react'
 import { Card } from 'react-bootstrap';
+import './Birthday.css'
 function Birthday() {
     return (
         <div>
-            <Card className="card2" style={{ width: '18rem' }}>
-                <Card.Header>BirthDays</Card.Header>
+            <Card className="Bcard" style={{ width: '18rem' }}>
+                <Card.Header><b><i>BirthDays</i></b></Card.Header>
                 <Card.Body>
                     <Card.Text>
-                    <h5>today sarath's Bday</h5>
-                
+                    <h6>Today sarath and Karthik Bday</h6>
+                    <h6></h6>
+                    <h6>Today sarath and Karthik Bday</h6>
+                    <h6>Today sarath and Karthik Bday</h6>
+                    <h6>Today sarath and Karthik Bday</h6>
+                    <h6>Today sarath and Karthik Bday</h6>
                     </Card.Text>
                 </Card.Body>
             </Card>
