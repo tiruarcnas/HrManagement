@@ -6,7 +6,7 @@ function Ament() {
     return (
         <div >
             <Card className="annou" style={{ width: '18rem' }}>
-                <Card.Header><b>Announcement</b></Card.Header>
+                <Card.Header className="annouheading"><b>Announcement</b></Card.Header>
                 <Card.Body>
                     <Card.Text>
                     <h6>Welcome to arcnas</h6>

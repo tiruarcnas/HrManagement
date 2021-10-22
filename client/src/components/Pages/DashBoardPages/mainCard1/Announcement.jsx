@@ -8,7 +8,7 @@ function Announcement() {
   return (
     <div className="announcement">
         <Card className="card1" style={{ width: '16.5rem' }}>
-          <Card.Header>Total Employee(s)</Card.Header>
+          <Card.Header className="card1heading">Total Employee(s)</Card.Header>
           <Card.Body>
             <Card.Text>
              <h2>10</h2>
@@ -16,7 +16,7 @@ function Announcement() {
           </Card.Body>
         </Card>
         <Card className="card2" style={{ width: '16.5rem' }}>
-          <Card.Header>On Boarding</Card.Header>
+          <Card.Header className="card2heading">On Boarding</Card.Header>
           <Card.Body>
             <Card.Text>
              <h2>05</h2>
@@ -24,7 +24,7 @@ function Announcement() {
           </Card.Body>
         </Card>  
         <Card className="card3" style={{ width: '16.5rem' }}>
-                <Card.Header> Remote Location</Card.Header>
+                <Card.Header className="card3heading"> Remote Location</Card.Header>
                 <Card.Body>
                     <Card.Text>
                     <h2>06</h2> 

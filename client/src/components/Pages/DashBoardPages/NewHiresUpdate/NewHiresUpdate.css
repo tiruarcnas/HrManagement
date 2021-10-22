@@ -16,6 +16,11 @@
     width: 70px;
     height: 70px;
 }
-.content{
-    margin-left: 1.5rem;
+.mat{
+    margin-left: 15px;
+}
+.nhucardheading{
+    background-color: royalblue;
+    color:#fff;
+    border-radius: 10%;
 }

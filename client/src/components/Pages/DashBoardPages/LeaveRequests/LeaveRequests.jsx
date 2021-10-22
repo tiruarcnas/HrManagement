@@ -6,7 +6,7 @@ function LeaveRequests() {
     return (
         <div>
              <Card className="leaverequest" style={{ width: '100%' }}>
-                <Card.Header><b>Leave Request</b></Card.Header>
+                <Card.Header className="lrcardheading"><b>Leave Request</b></Card.Header>
                 <Card.Body>
                     <Card.Text>
                         <div className="table">

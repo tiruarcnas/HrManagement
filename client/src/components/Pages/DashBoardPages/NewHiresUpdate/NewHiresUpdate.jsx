@@ -6,7 +6,7 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import './NewHiresUpdate.css'
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+
 
 
 
@@ -15,7 +15,7 @@ function NewHiresUpdate() {
     return (
         <div>
             <Card className="nhucard" style={{ width: '22rem' }}>
-                <Card.Header><b><i>New Hires Update</i></b></Card.Header>
+                <Card.Header className="nhucardheading"><b><i>New Hires Update</i></b></Card.Header>
                     <Card.Body>
                         <Card.Text>
                             <Card sx={{ maxWidth: 50 }}>
@@ -23,9 +23,9 @@ function NewHiresUpdate() {
                                     <div className="image">
                                     <img src="/dumy.png" alt="dumy" className="pic"/>
                                     </div>
-                                    <div className="content">
+                                    <div className="mat">
                                         <Typography variant="h6" component="div">
-                                            Sarath
+                                            Sarath R
                                         </Typography>
                                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
                                             Developer
@@ -33,7 +33,6 @@ function NewHiresUpdate() {
                                             Vizag
                                             </Typography>
                                         </Typography>
-                                        
                                     </div>
                                 </CardContent>
                                 <CardActions>
@@ -49,7 +48,7 @@ function NewHiresUpdate() {
                                <div className="image">
                                    <img src="/dumy.png" alt="dumy" className="pic"/>
                                 </div>
-                                <div className="content">
+                                <div className="mat">
                                     <Typography variant="h6" component="div">
                                         uday
                                     </Typography>
@@ -77,7 +76,7 @@ function NewHiresUpdate() {
                                <div className="image">
                                    <img src="/dumy.png" alt="dumy" className="pic"/>
                                 </div>
-                                <div className="content">
+                                <div className="mat">
                                     <Typography variant="h6" component="div">
                                      karthik
                                     </Typography>
