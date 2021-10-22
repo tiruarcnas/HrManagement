@@ -65,12 +65,12 @@ app.post('/login', async (req, res) => {
 
 app.get('/dashbord', middleware, async (req, res) => {
   try {
-    let exist = await Registeruser.findById(res.user.id);
+    let exist = await Registeruser.findById(req.user.id);
     if (!exist) {
-      console.log(err);
       return res.status(400).send('User Not Found');
+    } else {
+      return res.status(200).send(exist);
     }
-    res.json(exist);
   } catch (err) {
     console.log(err);
     return res.status(500).send('Server Error');

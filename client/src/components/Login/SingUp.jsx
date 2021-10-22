@@ -113,6 +113,7 @@ export default function Singup() {
                     type="text"
                     name="firstname"
                     onChange={changeHandler}
+                    method="post"
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -123,6 +124,7 @@ export default function Singup() {
                     label="Last Name"
                     type="text"
                     name="lastname"
+                    method="post"
                     onChange={changeHandler}
                   />
                 </Grid>
