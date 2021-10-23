@@ -1,4 +1,4 @@
-import './sidebar.css';
+//import './sidebar.css';
 
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import RestoreIcon from '@material-ui/icons/Restore';
@@ -26,12 +26,12 @@ export default function Sidebar() {
         <div className="sidebarWrapper">
             <div className="sidebarMenu">
                <ul className="sidebarList">
-                    <Link to="/dashboard" className="link">
-                        <li className="sidebarListItem">
-                            <HomeIcon className="sidebarIcon" />
-                            Dashboard
+                   <Link to="/admindashboard" className="link">
+                       <li className="sidebarListItem">
+                           <HomeIcon className="sidebarIcon"/>
+                           Dashboard 
                         </li>
-                    </Link>
+                    </Link> 
                     <Link to="/selfservice" className="link">
                         <li className="sidebarListItem">
                             <PersonIcon className="sidebarIcon" />

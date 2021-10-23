@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
+//import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -12,21 +12,19 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { Route } from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import Sidebar from '../SideBar/SideBar';
 import Topbar from '../TopBar/Topbar';
 import AdminDashBoard from '../Pages/DashBoardPages/AdminDashBoard';
 import ServicesDashBoard from '../Pages/SelfServicesPages/ServicesDashBoard';
-import LeaveTracker from '../Pages/LeaveTracker/LeaveTracker'
-import TimeTracker from '../Pages/TimeTracker/TimeTracker'
-import Attendance from '../Pages/Attendance/Attendance'
-import Performance from '../Pages/Performance/Performance'
-import Files from '../Pages/Files & HR Documentation/Files'
-import OrganizationChart from '../Pages/Organization Chart/OrganizationChart'
-import Travel from '../Pages/Travel/Travel'
-import Compensation from '../Pages/Compensation/Compensation'
-
-
+import LeaveTracker from '../Pages/LeaveTracker/LeaveTracker';
+import TimeTracker from '../Pages/TimeTracker/TimeTracker';
+import Attendance from '../Pages/Attendance/Attendance';
+import Performance from '../Pages/Performance/Performance';
+import Files from '../Pages/Files & HR Documentation/Files';
+import OrganizationChart from '../Pages/Organization Chart/OrganizationChart';
+import Travel from '../Pages/Travel/Travel';
+import Compensation from '../Pages/Compensation/Compensation';
 
 const drawerWidth = 240;
 
@@ -78,22 +76,22 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: 'nowrap',
-    boxSizing: 'border-box',
-    ...(open && {
-      ...openedMixin(theme),
-      '& .MuiDrawer-paper': openedMixin(theme),
-    }),
-    ...(!open && {
-      ...closedMixin(theme),
-      '& .MuiDrawer-paper': closedMixin(theme),
-    }),
+const Drawer = styled(MuiDrawer, {
+  shouldForwardProp: (prop) => prop !== 'open',
+})(({ theme, open }) => ({
+  width: drawerWidth,
+  flexShrink: 0,
+  whiteSpace: 'nowrap',
+  boxSizing: 'border-box',
+  ...(open && {
+    ...openedMixin(theme),
+    '& .MuiDrawer-paper': openedMixin(theme),
   }),
-);
+  ...(!open && {
+    ...closedMixin(theme),
+    '& .MuiDrawer-paper': closedMixin(theme),
+  }),
+}));
 
 export default function MiniDrawer() {
   const theme = useTheme();
@@ -125,53 +123,57 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            <Topbar/>
+            <Topbar />
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+            {theme.direction === 'rtl' ? (
+              <ChevronRightIcon />
+            ) : (
+              <ChevronLeftIcon />
+            )}
           </IconButton>
         </DrawerHeader>
         <Divider />
         <Sidebar />
-        
-        
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Route path="/dashboard">
-          <AdminDashBoard />
+        <Switch>
+       <Route path="/admindashboard">
+         <AdminDashBoard />
         </Route>
         <Route path="/selfservice">
           <ServicesDashBoard />
         </Route>
         <Route path="/leavetracker">
-          <LeaveTracker/>
+          <LeaveTracker />
         </Route>
         <Route path="/timetracker">
-          <TimeTracker/>
+          <TimeTracker />
         </Route>
         <Route path="/attendance">
-          <Attendance/>
+          <Attendance />
         </Route>
         <Route path="/performance">
-          <Performance/>
+          <Performance />
         </Route>
         <Route path="/files">
-          <Files/>
+          <Files />
         </Route>
         <Route path="/organizationchart">
-          <OrganizationChart/>
+          <OrganizationChart />
         </Route>
         <Route path="/travel">
-          <Travel/>
+          <Travel />
         </Route>
         <Route path="/compensation">
-          <Compensation/>
+          <Compensation />
         </Route>
+        </Switch>
       </Box>
     </Box>
   );

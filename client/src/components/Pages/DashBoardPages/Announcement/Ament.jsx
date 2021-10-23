@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { Card } from 'react-bootstrap';
-import './announc.css'
+import './announc.css';
 
 function Ament() {
     return (
@@ -26,4 +26,4 @@ function Ament() {
     )
 }
 
-export default Ament
+export default Ament;
