@@ -1,0 +1,19 @@
+
+
+.image{
+    height: 180px;
+    /* width: 50px; */
+}
+.cards__wrapper{
+    display: flex;
+  flex-wrap: nowrap;
+}
+.cards__wrapper > div {
+  background-color: #f1f1f1;
+  width: 275px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+ 
+}

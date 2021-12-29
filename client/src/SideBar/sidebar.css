@@ -1,0 +1,22 @@
+.sidebarWrapper {
+    padding: 0.4rem;
+  }
+  .sidebarListItem {
+    height: 2.4rem;
+    cursor: pointer;
+    display: flex;
+  }
+  /* */
+  .sidebarIcon {
+    margin-left: -1.8rem;
+    margin-right: 1.85rem;
+    font-size: 1.5rem !important;
+    color:rgb(30, 92, 143);
+  }
+  .link{
+    text-decoration: none;
+  }
+.sidebarHeading{
+  color:rgb(30, 92, 143);
+  font-weight: 500;
+}

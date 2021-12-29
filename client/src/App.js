@@ -1,40 +1,53 @@
-import React, { useState, createContext } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Singup from './components/Login/SingUp';
-import Forgotpassword from './components/Login/ForgotPassword';
-import MiniDrawer from './components/DashBoard/Dashboard'
-import AdminDashBoard from './components/Pages/DashBoardPages/AdminDashBoard';
+import React, { useState } from "react";
+import { Switch, Route } from "react-router-dom";
+import Login from "./Login/Login";
+import Singup from "./Login/SingUp";
+import ForgotPassword from "./Login/ForgotPassword";
+ import AdminDashBoard from "./DashBoard/AdminDashBoard";
+import Park from './Pages/Park';
+import Novotel from "./Pages/Novotel";
+import Update from './components/Update'
+import Read from './components/Read'
+import './App.css'
+//import UserDashBoard from './DashBoard/UserDashBoard'
 
-export const store = createContext();
 function App() {
-  const [token, setToken] = useState(null);
+  const [user, setLoginUser] = useState({});
   return (
     <div>
-      <store.Provider value={[token, setToken]}>
-        <Router>
-       
-          {/* <Route exact path="/">
-            <Login />
-          </Route>
-          <Route exact path="/signup">
-            <Singup />
-          </Route>
-          {/* <Route exact path="/forgotpassword">
-            <Forgotpassword />
-          </Route> */}
-          {/* <Route path="/dashboard">
-            <MiniDrawer />
-          </Route> */}
-          
-          {/* <Route >
-          <AdminDashBoard />
-          </Route> */} */}
-         
-        </Router>
-      </store.Provider>
+      <Switch>
+        <Route exact path="/">
+          <Login setLoginUser={setLoginUser} />
+        </Route>
+        <Route path="/signup"> 
+          <Singup />
+        </Route>
+        <Route path="/forgotpassword">
+          <ForgotPassword />
+        </Route>
+        <Route path="/admin">
+          {user && user._id ? (
+            <AdminDashBoard />
+          ) : (
+            <Login setLoginUser={setLoginUser} />
+          )}
+        </Route>
+        <Route path="/park">
+          <Park />
+        </Route>
+        <Route path="/novotel">
+          <Novotel />
+        </Route>
+        <Route path="/update">
+          <Update/>
+        </Route>
+        <Route path="/read">
+          <Read/>
+        </Route>
+      </Switch>
     </div>
   );
 }
 
 export default App;
+  

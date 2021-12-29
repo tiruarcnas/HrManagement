@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar{
+    background: linear-gradient(90deg, rgba(180,89,37,1) 0%, rgba(145,104,37,1) 31%, rgba(232,255,0,1) 100%);
+    position: static;
+    height: 80px;
+    
+}
+.title{
+    color: cornsilk;
+    font-weight: bold;
+}
+.submenu{
+    
+    width: 6rem;
+    padding: 2.5rem;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.content{
+    text-decoration: none;
+}
